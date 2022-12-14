@@ -22,16 +22,16 @@ void _push(stack_t **head, unsigned int counter)
 		if (flag == 1)
 		{ fprintf(stderr, "L%d: usage: push integer\n", counter);
 			fclose(parabus.file);
-			free(parabus.content);
+			free(parabus.l_content);
 			free_stack(*head);
 			exit(EXIT_FAILURE); }}
 	else
 	{ fprintf(stderr, "L%d: usage: push integer\n", counter);
 		fclose(parabus.file);
-		free(parabus.content);
+		free(parabus.l_content);
 		free_stack(*head);
 		exit(EXIT_FAILURE); }
-	i = atoi(bus.arg);
+	i = atoi(parabus.arg);
 	if (parabus.lifi == 0)
 		addnode(head, i);
 	else

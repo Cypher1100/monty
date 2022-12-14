@@ -23,7 +23,7 @@ void _pall(stack_t **head, unsigned int counter)
 }
 
 /**
-* f_swap - function that swaps the top two elements of the stack
+* _swap - function swaps the top two elements of the stack
 * @head: head of stack
 * @counter: line count
 *
@@ -44,7 +44,7 @@ void _swap(stack_t **head, unsigned int counter)
 	{
 		fprintf(stderr, "L%d: can't swap, stack too short\n", counter);
 		fclose(parabus.file);
-		free(parabus.content);
+		free(parabus.l_content);
 		free_stack(*head);
 		exit(EXIT_FAILURE);
 	}

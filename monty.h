@@ -51,13 +51,12 @@ typedef struct instruction_s
 * Description: carries values of parameters through the program
 */
 typedef struct parameters
-{
-	char *arg;
+{	char *arg;
 	FILE *file;
 	char *l_content;
 	int lifi;
-}  para;
-extern para parabus;
+}  paramaters;
+extern parameters  parabus;
 
 char *_realloc(char *ptr, unsigned int old_size, unsigned int new_size);
 ssize_t getstdin(char **lineptr, int file);
@@ -65,7 +64,7 @@ char  *clean_line(char *content);
 void _push(stack_t **head, unsigned int number);
 void _pall(stack_t **head, unsigned int number);
 void _pint(stack_t **head, unsigned int number);
-int execute(char *content, stack_t **head, unsigned int counter, FILE *file);
+int execute(char *l_content, stack_t **head, unsigned int counter, FILE *file);
 void free_stack(stack_t *head);
 void _pop(stack_t **head, unsigned int counter);
 void _swap(stack_t **head, unsigned int counter);
